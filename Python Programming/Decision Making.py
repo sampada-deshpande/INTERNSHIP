@@ -1,0 +1,56 @@
+#GRADE TRACKER 
+marks = int(input("Enter your marks (0-100): "))
+
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 60:
+    print("Grade: C")
+elif marks >= 40:
+    print("Grade: D")
+else:
+    print("Grade: F (Fail)")
+
+#ATM SYSTEM
+balance = 10000
+
+print("----- ATM MENU -----")
+print("1. Check Balance")
+print("2. Withdraw Money")
+print("3. Deposit Money")
+
+choice = int(input("Enter your choice (1-3): "))
+
+if choice == 1:
+    print("Your balance is:", balance)
+
+elif choice == 2:
+    withdraw = int(input("Enter amount to withdraw: "))
+    if withdraw <= balance:
+        balance = balance - withdraw
+        print("Withdrawal successful")
+        print("Remaining balance:", balance)
+    else:
+        print("Insufficient balance")
+
+elif choice == 3:
+    deposit = int(input("Enter amount to deposit: "))
+    balance = balance + deposit
+    print("Deposit successful")
+    print("Updated balance:", balance)
+
+else:
+    print("Invalid choice")
+
+#TRAFFIC LIGHT SYSYTEM
+signal = input("Enter traffic light color (red/yellow/green): ")
+
+if signal == "red":
+    print("Stop")
+elif signal == "yellow":
+    print("Get Ready")
+elif signal == "green":
+    print("Go")
+else:
+    print("Invalid signal")

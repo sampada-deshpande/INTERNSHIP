@@ -1,0 +1,80 @@
+DATE: 16/12/2025                DAY 2
+
+ Objective of the Day
+1.To understand all basic Python concepts
+2.To apply them using small mini projects
+
+Python Basics Concepts 
+
+🔹 1. Introduction to Python
+High-level programming language
+Interpreted and easy to learn
+Used in web development, data science, automation, AI
+
+🔹 2. Python Syntax
+Python uses indentation instead of braces
+Code readability is very important
+Example:
+print("Hello Python")
+
+🔹 3. Variables
+Used to store data
+No need to declare data type
+Example:
+name = "Sampada"
+age = 20
+
+🔹 4. Data Types
+int
+float
+string
+boolean
+Example:
+
+x = 10        # int
+y = 2.5       # float
+name = "ABC"  # string
+is_valid = True  # boolean
+
+🔹 5. Input and Output
+input() is used to take user input
+print() is used to display output
+Example:
+
+name = input("Enter your name: ")
+print("Hello", name)
+
+🔹 6. Type Casting
+Converting one data type to another
+Example:
+age = int(input("Enter age: "))
+
+🔹 7. Operators
+Arithmetic operators: + - * / %
+Relational operators: > < == !=
+Logical operators: and or not
+Example:
+a = 10
+b = 5
+print(a + b)
+print(a > b)
+
+🔹 8. Comments
+Used to explain code
+Ignored by Python interpreter
+Example:
+# This is a comment
+
+
+DECISION MAKING 
+
+Conditional Statements (Basics)
+1️⃣ if statement
+Executes code only if condition is true
+2️⃣ if-else statement
+Chooses between two options
+3️⃣ if-elif-else statement
+Chooses from multiple conditions
+4️⃣ Nested if statement
+if inside another if
+
