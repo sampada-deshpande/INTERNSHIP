@@ -233,3 +233,319 @@ for i in range(3):
         RESOURCES: https://youtu.be/rrWiZxMZIUU?si=Y_I7QFFQgD2bO170
                    https://youtu.be/1fXscll4rOo?si=bq9F4iutVXZRhuZw
                    https://youtu.be/z6OXxGRAX8c?si=RSSasGYHlnIzvzlt
+        
+
+
+        EXAMPLES:
+
+        #1.FOR LOOP
+#ATM SYSTEM
+correct_pin = "1234"
+balance = 10000
+transactions = []
+
+# PIN verification (3 attempts)
+for attempt in range(3):
+    pin = input("Enter ATM PIN: ")
+
+    if pin == correct_pin:
+        print("\nLogin successful")
+        break
+    else:
+        print("Wrong PIN")
+
+else:
+    print("Card blocked due to 3 wrong attempts")
+    exit()
+
+# ATM operations (maximum 5 operations)
+for _ in range(5):
+    print("\n----- ATM MENU -----")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Mini Statement")
+    print("5. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        print("Current Balance:", balance)
+
+    elif choice == 2:
+        amount = int(input("Enter deposit amount: "))
+        if amount > 0:
+            balance += amount
+            transactions.append(f"Deposited: {amount}")
+            print("Deposit successful")
+        else:
+            print("Invalid deposit amount")
+
+    elif choice == 3:
+        amount = int(input("Enter withdraw amount: "))
+        if amount <= 0:
+            print("Invalid amount")
+        elif amount > balance:
+            print("Insufficient balance")
+        elif amount > 5000:
+            print("Withdraw limit exceeded (Max 5000)")
+        else:
+            balance -= amount
+            transactions.append(f"Withdrawn: {amount}")
+            print("Please collect your cash")
+
+    elif choice == 4:
+        print("\n--- Mini Statement ---")
+        if not transactions:
+            print("No transactions yet")
+        else:
+            for t in transactions:
+                print(t)
+
+    elif choice == 5:
+        print("Thank you for using ATM")
+        break
+
+    else:
+        print("Invalid choice")
+
+
+
+#LIBRARY MANAGEMENT SYSTEM 
+library_books = ["Python", "Java", "C++", "Data Science"]
+issued_books = []
+
+admin_user = "admin"
+admin_pass = "lib123"
+
+# ---------------- LOGIN SYSTEM ----------------
+for attempt in range(3):
+    user = input("Enter librarian username: ")
+    pwd = input("Enter password: ")
+
+    if user == admin_user and pwd == admin_pass:
+        print("\nLogin successful")
+        break
+    else:
+        print("Invalid credentials")
+
+else:
+    print("Access denied. Too many attempts.")
+    exit()
+
+# ---------------- LIBRARY MENU (6 OPERATIONS) ----------------
+for _ in range(6):
+    print("\n----- LIBRARY MENU -----")
+    print("1. View Available Books")
+    print("2. Issue Book")
+    print("3. Return Book")
+    print("4. View Issued Books")
+    print("5. Add New Book")
+    print("6. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        print("\nAvailable Books:")
+        if not library_books:
+            print("No books available")
+        else:
+            for book in library_books:
+                print("-", book)
+
+    elif choice == 2:
+        book = input("Enter book name to issue: ")
+        if book in library_books:
+            library_books.remove(book)
+            issued_books.append(book)
+            print("Book issued successfully")
+        else:
+            print("Book not available")
+
+    elif choice == 3:
+        book = input("Enter book name to return: ")
+        if book in issued_books:
+            issued_books.remove(book)
+            library_books.append(book)
+            print("Book returned successfully")
+        else:
+            print("This book was not issued")
+
+    elif choice == 4:
+        print("\nIssued Books:")
+        if not issued_books:
+            print("No books issued")
+        else:
+            for book in issued_books:
+                print("-", book)
+
+    elif choice == 5:
+        new_book = input("Enter new book name: ")
+        library_books.append(new_book)
+        print("Book added successfully")
+
+    elif choice == 6:
+        print("Exiting Library System")
+        break
+
+    else:
+        print("Invalid choice")
+
+
+
+#2.WHILE LOOP 
+#ATM SYSTEM 
+correct_pin = "1234"
+balance = 10000
+transactions = []
+
+# ---------------- PIN VERIFICATION ----------------
+attempts = 0
+
+while attempts < 3:
+    pin = input("Enter ATM PIN: ")
+
+    if pin == correct_pin:
+        print("\nLogin successful")
+        break
+    else:
+        print("Wrong PIN")
+        attempts += 1
+else:
+    print("Card blocked due to 3 wrong attempts")
+    exit()
+
+# ---------------- ATM MENU ----------------
+while True:
+    print("\n----- ATM MENU -----")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Mini Statement")
+    print("5. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        print("Current Balance:", balance)
+
+    elif choice == 2:
+        amount = int(input("Enter deposit amount: "))
+        if amount > 0:
+            balance += amount
+            transactions.append(f"Deposited: {amount}")
+            print("Deposit successful")
+        else:
+            print("Invalid deposit amount")
+
+    elif choice == 3:
+        amount = int(input("Enter withdraw amount: "))
+        if amount <= 0:
+            print("Invalid amount")
+        elif amount > balance:
+            print("Insufficient balance")
+        elif amount > 5000:
+            print("Withdraw limit exceeded (Max 5000)")
+        else:
+            balance -= amount
+            transactions.append(f"Withdrawn: {amount}")
+            print("Please collect your cash")
+
+    elif choice == 4:
+        print("\n--- Mini Statement ---")
+        if not transactions:
+            print("No transactions yet")
+        else:
+            for t in transactions:
+                print(t)
+
+    elif choice == 5:
+        print("Thank you for using ATM")
+        break
+
+    else:
+        print("Invalid choice")
+
+
+#LIBRARY MANAGEMENT SYSTEM 
+library_books = ["Python", "Java", "C++", "Data Science"]
+issued_books = []
+
+admin_user = "admin"
+admin_pass = "lib123"
+
+# ---------------- LOGIN SYSTEM ----------------
+attempts = 0
+
+while attempts < 3:
+    user = input("Enter librarian username: ")
+    pwd = input("Enter password: ")
+
+    if user == admin_user and pwd == admin_pass:
+        print("\nLogin successful")
+        break
+    else:
+        print("Invalid credentials")
+        attempts += 1
+else:
+    print("Access denied. Too many attempts.")
+    exit()
+
+# ---------------- LIBRARY MENU ----------------
+while True:
+    print("\n----- LIBRARY MENU -----")
+    print("1. View Available Books")
+    print("2. Issue Book")
+    print("3. Return Book")
+    print("4. View Issued Books")
+    print("5. Add New Book")
+    print("6. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        print("\nAvailable Books:")
+        if not library_books:
+            print("No books available")
+        else:
+            for book in library_books:
+                print("-", book)
+
+    elif choice == 2:
+        book = input("Enter book name to issue: ")
+        if book in library_books:
+            library_books.remove(book)
+            issued_books.append(book)
+            print("Book issued successfully")
+        else:
+            print("Book not available")
+
+    elif choice == 3:
+        book = input("Enter book name to return: ")
+        if book in issued_books:
+            issued_books.remove(book)
+            library_books.append(book)
+            print("Book returned successfully")
+        else:
+            print("This book was not issued")
+
+    elif choice == 4:
+        print("\nIssued Books:")
+        if not issued_books:
+            print("No books issued")
+        else:
+            for book in issued_books:
+                print("-", book)
+
+    elif choice == 5:
+        new_book = input("Enter new book name: ")
+        library_books.append(new_book)
+        print("Book added successfully")
+
+    elif choice == 6:
+        print("Exiting Library System")
+        break
+
+    else:
+        print("Invalid choice")
+

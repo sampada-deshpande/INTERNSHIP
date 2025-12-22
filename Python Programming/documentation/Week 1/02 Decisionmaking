@@ -1,3 +1,16 @@
+DECISION MAKING 
+
+Conditional Statements (Basics)
+1️⃣ if statement
+Executes code only if condition is true
+2️⃣ if-else statement
+Chooses between two options
+3️⃣ if-elif-else statement
+Chooses from multiple conditions
+4️⃣ Nested if statement
+if inside another if
+
+examples 
 #GRADE TRACKER 
 marks = int(input("Enter your marks (0-100): "))
 
