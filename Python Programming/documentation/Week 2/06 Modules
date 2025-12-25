@@ -1,0 +1,87 @@
+
+ DATE:23/12/2025                                                                 MODULES
+
+In Python, a module is simply a file that contains Python code (functions, variables, classes) and has a .py extension. When you import that file in another Python file, you can reuse everything defined inside it.
+​
+
+Basic idea
+A module is just one .py file, for example math_utils.py.
+It is used to organize code so that it is easier to maintain and reuse instead of writing everything in a single big file.
+You bring a module’s code into another file using the import or from ... import ... statements.
+
+​Syntax to use a module
+1️⃣ Import the whole module
+import module_name
+
+module_name.function()
+
+2️⃣ Import specific items
+from module_name import function1, function2
+
+3️⃣ Import with alias
+import module_name as alias
+
+
+Types of Modules in Python
+
+Python modules are mainly of three types:
+
+1️⃣ Built-in Modules
+2️⃣ User-defined Modules
+3️⃣ Third-party (External) Modules
+
+1️⃣ Built-in Modules
+
+These come pre-installed with Python. You don’t need to install them.
+
+ Examples: math, random, datetime, os, sys
+
+🔹 Example: random module
+import random
+
+print(random.randint(1, 10))
+
+
+ Gives a random number between 1 and 10.
+
+🔹 Example: datetime module
+import datetime
+
+today = datetime.datetime.now()
+print(today)
+
+2️⃣ User-defined Modules
+
+These are modules you create yourself in a .py file to reuse your code.
+
+ Example: Create calc.py
+
+# calc.py
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+
+Use it in another file:
+
+import calc
+
+print(calc.add(10, 5))
+print(calc.sub(10, 5))
+
+3️⃣ Third-party (External) Modules
+
+These are created by others and must be installed using pip.
+
+ Examples: numpy, pandas, requests, matplotlib
+
+🔹 Install first (in terminal):
+pip install requests
+
+🔹 Example: requests module
+import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)

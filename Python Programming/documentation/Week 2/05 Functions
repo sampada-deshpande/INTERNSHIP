@@ -1,0 +1,77 @@
+DATE : 22/12/2025
+
+What is a Function in Python?
+
+A function is a reusable block of code that performs a specific task.
+Instead of writing the same code again and again, you write it once in a function and call it whenever needed.
+
+ 
+ Why Use Functions?
+
+ 1.Reuse code
+
+ 2.Make code readable
+
+ 3.Easy to maintain & debug
+
+ 4.Break big programs into smaller parts
+
+ Syntax of a Function
+def function_name(parameters)
+    """docstring (optional)"""
+    statements
+    return value   # optional
+
+📝 Simple Example
+def greet():
+    print("Hello, welcome to Python!")
+
+greet()
+
+
+🔹 Output:
+
+Hello, welcome to Python!
+
+Types of Functions in Python
+
+1️⃣ Built-in Functions
+
+Already provided by Python.
+
+Examples:
+
+print("Hi")
+len([1, 2, 3])
+type(10)
+
+2️⃣ User-defined Functions
+
+Created by you using def.
+
+def square(n):
+    return n * n
+
+3️⃣ Functions with No Arguments
+def show():
+    print("No arguments here")
+
+show()
+
+4️⃣ Functions with Arguments
+def multiply(a, b):
+    print(a * b)
+
+multiply(3, 4)
+
+
+A docstring
+(short for documentation string) is a special string in Python used to describe what a module, function, class, or method does. It helps others (and you!) understand the code and is accessible at runtime.
+
+✅ What makes a string a docstring?
+
+It is written as the first statement inside a module, function, class, or method.
+
+It uses triple quotes: """ ... """ (or ''' ... ''').
+
+Python stores it in the __doc__ attribute.
